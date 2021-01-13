@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .logo {
+    &__img {
+      height: 45px;
+      width: 45px;
+    }
+
+    &__name {
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+
+  .navbar {
+    &__link {
+      margin-right: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #23324d;
+    }
+
+    &__action {
+      border-radius: 20px;
+      background-color: #23324d;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+}
