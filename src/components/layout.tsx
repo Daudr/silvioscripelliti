@@ -23,9 +23,9 @@ const TemplateWrapper = ({ children }) => (
           seoMetaTags {
             ...GatsbyDatoCmsSeoMetaTags
           }
-          introTextNode {
-            childMarkdownRemark {
-              html
+          logo {
+            fluid(maxWidth: 45, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
             }
           }
           copyright
@@ -41,15 +41,15 @@ const TemplateWrapper = ({ children }) => (
       }
     `}
     render={(data) => (
-      <div className="container">
+      <div>
         <HelmetDatoCms
           favicon={data.datoCmsSite.faviconMetaTags}
           seo={data.datoCmsHome.seoMetaTags}
         />
 
-        <Header />
+        <Header logo={data.datoCmsHome.logo.fluid} />
 
-        {children}
+        <div className="container">{children}</div>
 
         <Footer copyright={data.datoCmsHome.copyright} />
       </div>

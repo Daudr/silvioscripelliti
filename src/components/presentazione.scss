@@ -1,0 +1,35 @@
+.presentazione {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 200px;
+  min-height: 300px;
+
+  &__description {
+    width: 50%;
+    font-size: 18px;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 30px;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__photo {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    left: calc(100vw - 650px);
+    z-index: -1;
+
+    max-height: 550px;
+  }
+}
